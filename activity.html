@@ -3,31 +3,114 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Activity</title>
+    <title>Activity - Hiking Adventures</title>
     <link rel="stylesheet" href="css/style.css">
+    <style>
+        /* Custom styles for the Activity page */
+        body {
+            background-color: #e6f7ff;
+            color: #004d80;
+            font-family: 'Georgia', serif;
+        }
+        .activity-header {
+            background-color: #b3e6ff;
+            padding: 20px;
+            text-align: center;
+            border-bottom: 4px solid #005580;
+        }
+        .gallery {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+            margin: 20px 0;
+        }
+        .gallery img {
+            max-width: 100%;
+            height: auto;
+            border: 2px solid #004d80;
+            border-radius: 10px;
+        }
+        .gallery figure {
+            text-align: center;
+            width: 300px;
+        }
+        .links {
+            margin-top: 20px;
+        }
+        .links a {
+            display: block;
+            margin: 10px 0;
+            color: #005580;
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.3s;
+        }
+        .links a:hover {
+            color: #ff6600;
+        }
+    </style>
 </head>
 <body>
+    <!-- Navigation menu -->
     <header>
         <nav class="navbar">
-            <a href="index.html">Home</a>
-            <a href="activity.html">Activity</a>
-            <a href="accessibility.html">Accessibility</a>
-            <a href="github.html">GitHub</a>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="activity.html">Activity</a></li>
+                <li><a href="accessibility.html">Accessibility</a></li>
+                <li><a href="github.html">GitHub</a></li>
+            </ul>
         </nav>
     </header>
+
+    <!-- Activity Header -->
+    <div class="activity-header">
+        <h1>Hiking Adventures</h1>
+        <p>Explore the beauty of nature through hiking!</p>
+    </div>
+
+    <!-- Image Gallery -->
     <main>
-        <h1>Hiking in Norway</h1>
-        <p>Explore the beautiful hiking trails of Norway!</p>
-        <h2>Top Trails</h2>
-        <ul>
-            <li><a href="https://ut.no">UT.no</a></li>
-            <li><a href="https://www.visitnorway.com">Visit Norway</a></li>
-        </ul>
-        <img src="images/activity-image1.jpg" alt="Hiking Trail">
-        <img src="images/activity-image2.jpg" alt="Mountain View">
+        <section>
+            <h2>Gallery</h2>
+            <div class="gallery">
+                <figure>
+                    <img src="images/mountain.jpg" alt="Mountain View">
+                    <figcaption>Breathtaking mountain view.</figcaption>
+                </figure>
+                <figure>
+                    <img src="images/forest.jpg" alt="Forest Trail">
+                    <figcaption>Peaceful forest trail.</figcaption>
+                </figure>
+                <figure>
+                    <img src="images/lake.jpg" alt="Lake at Sunset">
+                    <figcaption>Serene lake at sunset.</figcaption>
+                </figure>
+                <figure>
+                    <img src="images/gear.jpg" alt="Hiking Gear">
+                    <figcaption>Essential hiking gear.</figcaption>
+                </figure>
+            </div>
+        </section>
+
+        <!-- External Links -->
+        <section>
+            <h2>Learn More About Hiking</h2>
+            <div class="links">
+                <a href="https://www.ut.no/" target="_blank">UT.no - Your Guide to Outdoor Adventures</a>
+                <a href="https://www.norway.no/" target="_blank">Visit Norway - Hiking Trails</a>
+                <a href="https://www.rei.com/" target="_blank">REI - Hiking Gear and Tips</a>
+                <a href="https://www.alltrails.com/" target="_blank">AllTrails - Find Hiking Routes</a>
+                <a href="https://www.outdoorproject.com/" target="_blank">Outdoor Project - Adventure Ideas</a>
+                <a href="https://www.lonelyplanet.com/" target="_blank">Lonely Planet - Hiking Destinations</a>
+            </div>
+        </section>
     </main>
+
+    <!-- Footer -->
     <footer>
-        <p>© 2024 OsloMet</p>
+        <p>© 2024 Hiking Adventures</p>
     </footer>
 </body>
 </html>
