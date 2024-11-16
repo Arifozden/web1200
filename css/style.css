@@ -96,7 +96,7 @@ img {
   margin: 10px 0;
 }
 
-/* Özel: Activity Sayfası */
+/* Activity Sayfası */
 .activity-page {
   background-color: #ffefc6;
   color: #555;
@@ -106,12 +106,46 @@ img {
   color: #d48806;
 }
 
+.activity-page h2, .activity-page h3 {
+  color: #333;
+}
+
 .activity-page a {
   color: #d48806;
+  text-decoration: none;
 }
 
 .activity-page a:hover {
   text-decoration: underline;
+}
+
+/* Görsellerin düzeni */
+.activity-page img {
+  max-width: 100%;
+  height: auto;
+  border: 2px solid #ddd;
+  border-radius: 5px;
+  margin: 10px 0;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  background-color: #0366d6;
+  color: white;
+  padding: 10px 0;
+  margin-top: 20px;
+}
+
+/* Mobil Uyumluluk */
+@media (max-width: 768px) {
+  .activity-page h1 {
+      font-size: 1.5em;
+  }
+
+  .activity-page h2, .activity-page h3 {
+      font-size: 1.2em;
+  }
 }
 
 /* GitHub Sayfası */
