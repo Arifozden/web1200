@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Accessibility Analysis</title>
+    <link rel="stylesheet" href="css/style.css">
+    
+</head>
+<body>
+    <!-- Navigation menu -->
+    <header>
+        <nav class="navbar">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="activity.html">Activity</a></li>
+                <li><a href="accessibility.html">Accessibility</a></li>
+                <li><a href="github.html">GitHub</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Page Header -->
+    
+
+    <!-- Content Section -->
+    <main class="content">
+        <div class="header">
+            <h1>Accessibility Analysis</h1>
+            <p>Ensuring Universal Access to Our Website</p>
+        </div>
+        <section>
+            <h2>Automated Testing Results</h2>
+            <p>We tested our website using <strong>WAVE</strong> and <strong>Lighthouse</strong> tools. Both tests confirmed that the site follows most accessibility guidelines, with high scores in contrast ratios, keyboard navigation, and screen reader compatibility. Below are the key results:</p>
+            <ul>
+                <li>Contrast ratio: 4.5:1 or higher across all text and background colors.</li>
+                <li>Proper use of semantic HTML elements like <code>&lt;header&gt;</code>, <code>&lt;main&gt;</code>, and <code>&lt;section&gt;</code>.</li>
+                <li>All images include descriptive alternative text using the <code>alt</code> attribute.</li>
+                <li>Navigation is fully accessible via keyboard.</li>
+            </ul>
+            <div class="screenshot">
+                <img src="images/lighthouse-report.png" alt="Lighthouse accessibility report screenshot">
+                <p>Figure 1: Lighthouse Accessibility Report</p>
+            </div>
+        </section>
+
+        <section>
+            <h2>Manual Checks and Improvements</h2>
+            <p>In addition to automated tests, we conducted manual checks to identify areas for improvement. These include:</p>
+            <ul>
+                <li>Ensuring descriptive link text for better usability. For instance, "Learn more" links were updated to include context, e.g., "Learn more about hiking tips."</li>
+                <li>Testing navigation via screen readers (NVDA and VoiceOver) to verify content reading order is logical.</li>
+                <li>Improving focus indicators for better keyboard navigation visibility.</li>
+            </ul>
+            <p>One issue identified manually was missing <strong>ARIA roles</strong> for dynamic content. For example, we added <code>role="navigation"</code> for the menu and <code>aria-label</code> attributes for better context.</p>
+        </section>
+
+        <section>
+            <h2>Code Choices for Accessibility</h2>
+            <p>We implemented the following coding practices to enhance accessibility:</p>
+            <ul>
+                <li><strong>Semantic HTML:</strong> Proper use of <code>&lt;header&gt;</code>, <code>&lt;nav&gt;</code>, and <code>&lt;footer&gt;</code> for logical content structure.</li>
+                <li><strong>Color Contrast:</strong> Background and text colors meet WCAG AA standards.</li>
+                <li><strong>Alt Text:</strong> All images include descriptive alternative text for screen readers.</li>
+                <li><strong>Keyboard Navigation:</strong> Interactive elements like links and buttons are fully keyboard-accessible.</li>
+            </ul>
+            <div class="screenshot">
+                <img src="images/wave-report.png" alt="WAVE accessibility report screenshot">
+                <p>Figure 2: WAVE Accessibility Report</p>
+            </div>
+        </section>
+
+        <section>
+            <h2>Conclusion</h2>
+            <p>Our website adheres to accessibility best practices, ensuring universal access for users of all abilities. While automated tools helped identify key issues, manual testing allowed us to fine-tune usability and enhance ARIA support. These efforts align with our goal of creating an inclusive digital environment.</p>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p>© 2024 Accessibility Report</p>
+    </footer>
+</body>
+</html>

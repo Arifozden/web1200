@@ -1,0 +1,189 @@
+/* Genel Ayarlar */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  background-color: #f4f4f4;
+  color: #333;
+}
+
+h1, h2, h3 {
+  margin: 10px 0;
+}
+
+p {
+  margin: 10px 0;
+}
+
+/* Genel Header ve Menu */
+header {
+  background-color: #0366d6;
+  color: white;
+  padding: 10px 0;
+  text-align: center;
+}
+
+header nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  background-color: #024985;
+}
+
+header nav ul li {
+  margin: 0 10px;
+}
+
+header nav ul li a {
+  color: white;
+  text-decoration: none;
+  padding: 10px 20px;
+  display: inline-block;
+}
+
+header nav ul li a:hover {
+  background-color: #014372;
+  border-radius: 5px;
+}
+
+/* Ana İçerik */
+main {
+  max-width: 1200px;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: white;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  background-color: #0366d6;
+  color: white;
+  padding: 10px 0;
+  margin-top: 20px;
+}
+
+/* Tablo Stilleri */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 20px 0;
+}
+
+table th, table td {
+  border: 1px solid #ddd;
+  padding: 10px;
+  text-align: left;
+}
+
+table th {
+  background-color: #024985;
+  color: white;
+}
+
+/* Görseller */
+img {
+  max-width: 100%;
+  height: auto;
+  border: 2px solid #ddd;
+  border-radius: 5px;
+  margin: 10px 0;
+}
+
+/* Activity Sayfası */
+.activity-page {
+  background-color: #ffefc6;
+  color: #555;
+}
+
+.activity-page h1 {
+  color: #d48806;
+}
+
+.activity-page h2, .activity-page h3 {
+  color: #333;
+}
+
+.activity-page a {
+  color: #d48806;
+  text-decoration: none;
+}
+
+.activity-page a:hover {
+  text-decoration: underline;
+}
+
+/* Resimlerin boyutlarını 350px yapalım */
+.activity-page img {
+  width: 350px;      /* Resmin genişliği */
+  height: auto;    /* Yükseklik oranını korur */
+  object-fit: cover; /* Resmin orantısını bozmadan kutuya sığmasını sağlar */
+  margin: 10px 0;
+  border-radius: 5px;
+  border: 2px solid #ddd;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+
+
+/* Kaynak linklerinin küçük açıklamalarını düzenleyelim */
+div p small {
+  font-size: 0.9em;
+  color: #555;
+}
+
+div p small a {
+  color: #0066cc;
+  text-decoration: none;
+}
+
+div p small a:hover {
+  text-decoration: underline;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  background-color: #0366d6;
+  color: white;
+  padding: 10px 0;
+  margin-top: 20px;
+}
+
+/* Mobil Uyumluluk */
+@media (max-width: 768px) {
+  header nav ul {
+    flex-direction: column;
+  }
+
+  header nav ul li {
+    margin: 5px 0;
+  }
+
+  .activity-page h1 {
+    font-size: 1.5em;
+  }
+
+  .activity-page h2, .activity-page h3 {
+    font-size: 1.2em;
+  }
+}
+
+/* GitHub Sayfası */
+.screenshot img {
+  border-color: #333;
+}
+
+/* Erişilebilirlik Sayfası */
+.accessibility-section {
+  border: 1px solid #ddd;
+  padding: 10px;
+  margin: 20px 0;
+  background-color: #eaf5ff;
+}
