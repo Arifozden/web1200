@@ -9,7 +9,7 @@
 body {
   font-family: Arial, sans-serif;
   line-height: 1.6;
-  margin: 0;
+  margin: 20px;
   padding: 0;
   background-color: #f9f9f9;
 }
@@ -40,4 +40,92 @@ footer {
   padding: 10px;
   background-color: #333;
   color: white;
+}
+
+/* Tablo stili */
+/* Tablolar için genel stil */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 20px 0;
+}
+
+/* Başlıkların stili */
+th {
+  background-color: #004a99; /* OsloMet mavisi gibi bir renk */
+  color: white;
+  font-weight: bold;
+  text-align: left;
+  padding: 10px;
+}
+
+/* Hücrelerin stili */
+td {
+  border: 1px solid #ddd;
+  padding: 10px;
+  color: #333; /* Koyu gri */
+}
+
+/* Alternatif satır renkleri */
+tbody tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+/* Satır üzerine gelindiğinde arka plan rengi */
+tbody tr:hover {
+  background-color: #e0f7fa;
+}
+/* Siyah arka planlı tablolar için özel stil */
+.dark-table {
+  background-color: #333; /* Siyah arka plan */
+  color: #fff; /* Beyaz yazı */
+  border: 1px solid #444; /* Hafif gri çerçeve */
+  width: 100%;
+  border-collapse: collapse;
+  margin: 20px 0;
+}
+
+.dark-table th {
+  background-color: #333; /* Koyu gri başlık arka planı */
+  color: #fff; /* Beyaz yazı */
+  text-align: left;
+  padding: 10px;
+}
+
+.dark-table td {
+  padding: 10px;
+  border: 1px solid #444; /* Hafif gri hücre kenarları */
+  color: #fff; /* Beyaz yazı */
+}
+
+/* Alternatif satır renkleri */
+.dark-table tbody tr:nth-child(even) {
+  background-color: #111; /* Daha açık siyah */
+}
+
+/* Satır üzerine gelindiğinde */
+.dark-table tbody tr:hover {
+  background-color: #222; /* Daha koyu gri */
+}
+
+
+/* Fotoğraf hücreleri stili */
+.small-photo img {
+  width: 100px; /* Üstteki fotoğraf boyutu */
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}
+
+.large-photo img {
+  width: 200px; /* Alttaki fotoğraf boyutu (şu ankinin 2 katı) */
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}
+
+/* Metin hücreleri */
+td {
+  vertical-align: middle;
+  line-height: 1.5;
 }
