@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="no">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Page Title</title>
+    <title>Accessibility</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -18,10 +18,109 @@
         </nav>
     </header>
     <main>
-        <!-- Page-specific content goes here -->
+        <section>
+            <h1>Webtilgjengelighet</h1>
+            <p>
+                Webtilgjengelighet sikrer at alle, inkludert personer med nedsatt funksjonsevne, kan bruke nettsider. Dette prosjektet har fokusert på å oppfylle standardene fra <strong>WCAG 2.1</strong>, med særlig oppmerksomhet på kontrastforhold, alternativ tekst for bilder og navigasjon med tastatur.
+            </p>
+        </section>
+
+        <section>
+            <h2>Testresultater</h2>
+            <p>Vi testet nettstedet ved hjelp av både automatiske og manuelle metoder. Her er resultatene:</p>
+            <ul>
+                <li>Lighthouse-verktøyet: Scoret 100 i tilgjengelighet på både mobil og skrivebord.</li>
+                <li>Wave-verktøyet: Ingen store problemer funnet.</li>
+                <li>Manuelle tester: Bekreftet at siden kan navigeres ved hjelp av tastatur.</li>
+            </ul>
+            <div>
+                <h3>Resultater fra mobil og skrivebord</h3>
+                <figure>
+                    <img src="images/Activity_Accessibility_mobile.png" alt="Tilgjengelighetsscore for mobil - Aktivitetssiden" width="400">
+                    <figcaption>Mobil: Aktivitetsside - Tilgjengelighetsscore</figcaption>
+                </figure>
+                <figure>
+                    <img src="images/Activity_Accessibility_desktop.png" alt="Tilgjengelighetsscore for skrivebord - Aktivitetssiden" width="400">
+                    <figcaption>Skrivebord: Aktivitetsside - Tilgjengelighetsscore</figcaption>
+                </figure>
+                <figure>
+                    <img src="images/Home_Accessibility_mobile.png" alt="Tilgjengelighetsscore for mobil - Hjemmeside" width="400">
+                    <figcaption>Mobil: Hjemmeside - Tilgjengelighetsscore</figcaption>
+                </figure>
+                <figure>
+                    <img src="images/Home_Accessibility_desktop.png" alt="Tilgjengelighetsscore for skrivebord - Hjemmeside" width="400">
+                    <figcaption>Skrivebord: Hjemmeside - Tilgjengelighetsscore</figcaption>
+                </figure>
+            </div>
+        </section>
+
+        <section>
+            <h2>Kodingvalg for universell utforming</h2>
+            <p>
+                Vi har prioritert universell utforming for å sikre at nettstedet vårt er tilgjengelig for alle brukere, inkludert personer med funksjonsnedsettelser. Her er en detaljert gjennomgang av de viktigste kodingsvalgene og hvorfor de ble tatt.
+            </p>
+            <ul>
+                <li><strong>Alt-tekst for bilder:</strong> Alt-tekster gir viktig kontekst til skjermleserbrukere som ikke kan se bildene. Vi har inkludert beskrivende alt-tekster for alle bilder, som:
+                    <pre><code>&lt;img src="images/Home_Accessibility_mobile.png" alt="Tilgjengelighetsscore for mobil - Hjemmeside"&gt;</code></pre>
+                </li>
+                <li><strong>Semantisk HTML-struktur:</strong> Ved å bruke semantiske HTML-elementer som <code>&lt;header&gt;</code>, <code>&lt;nav&gt;</code>, <code>&lt;main&gt;</code>, og <code>&lt;footer&gt;</code>, skaper vi en logisk struktur for innholdet. For eksempel:
+                    <pre><code>
+&lt;header&gt;
+    &lt;nav&gt;
+        &lt;ul&gt;
+            &lt;li&gt;&lt;a href="index.html"&gt;Hjem&lt;/a&gt;&lt;/li&gt;
+        &lt;/ul&gt;
+    &lt;/nav&gt;
+&lt;/header&gt;
+                    </code></pre>
+                </li>
+                <li><strong>Fargekontrast og lesbarhet:</strong> Kontrast mellom tekst og bakgrunn er nøye evaluert for å oppfylle WCAG 2.1-retningslinjene. For eksempel har vi brukt mørk tekst på lys bakgrunn for optimal lesbarhet:
+                    <pre><code>
+body {
+    color: #333;
+    background-color: #f9f9f9;
+}
+                    </code></pre>
+                </li>
+                <li><strong>Tastaturnavigasjon:</strong> Alle interaktive elementer, som lenker og knapper, kan nås og brukes med tastatur. Dette ble testet manuelt ved hjelp av <code>Tab</code>-tasten. Vi har også sørget for at fokusindikatorer er synlige:
+                    <pre><code>
+a:focus {
+    outline: 2px solid #004a99;
+}
+                    </code></pre>
+                </li>
+                <li><strong>Responsivt design:</strong> Vi har brukt media queries for å optimalisere nettstedet for ulike skjermstørrelser, fra mobil til skrivebord:
+                    <pre><code>
+@media (max-width: 768px) {
+    img {
+        width: 100%;
+        height: auto;
+    }
+}
+                    </code></pre>
+                </li>
+                <li><strong>Automatiske og manuelle tester:</strong> Vi brukte både Lighthouse og Wave for å identifisere potensielle tilgjengelighetsproblemer. Selv om automatiske tester er nyttige, har vi også gjennomført manuelle sjekker for å sikre riktig tabbingsrekkefølge, logisk DOM-struktur og synlige fokusindikatorer.
+                </li>
+                <li><strong>Universell utforming som en helhet:</strong> Tilgjengelighet handler ikke bare om å oppfylle tekniske krav, men også om å skape en positiv brukeropplevelse. Gjennom prosjektet har vi fokusert på å gjøre nettstedet intuitivt, enkelt og meningsfylt for alle brukere, inkludert de med ulike funksjonshemninger.
+                </li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>Manuelle sjekker</h2>
+            <p>
+                Selv om automatiserte tester er nyttige, gjennomførte vi også manuelle tester for å verifisere følgende:
+            </p>
+            <ul>
+                <li>Riktig tabbingsrekkefølge for alle interaktive elementer.</li>
+                <li>Visuell rekkefølge følger DOM-rekkefølge.</li>
+                <li>Fokusindikatorer er synlige og lett gjenkjennelige.</li>
+            </ul>
+        </section>
     </main>
+
     <footer>
-        <p>&copy; 2024 AOA</p>
+        <p>&copy; 2024 Tilgjengelighetsprosjekt. Alle rettigheter forbeholdt.</p>
     </footer>
 </body>
 </html>
