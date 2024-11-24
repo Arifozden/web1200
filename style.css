@@ -1,21 +1,23 @@
-/* Genel Ayarlar */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  /* Alle elementene starter uten margin eller padding, og boksmodellen inkluderer padding og border i størrelsen. */
 }
 
 body {
   font-family: Arial, sans-serif;
   background-color: #f9f9f9;
   color: #333;
+/* Kroppsteksten bruker Arial-skrift, har en lys bakgrunnsfarge og mørk tekst for lesbarhet. */
 }
 
-/* Header ve Navigasyon */
+/* Header og Navigasyon */
 header {
   background-color: #333;
   color: white;
   padding: 15px 20px;
+  /* Overskriften har mørk bakgrunn og hvit tekst for kontrast. */
 }
 
 nav ul {
@@ -23,6 +25,7 @@ nav ul {
   display: flex;
   justify-content: center;
   gap: 20px;
+  /* Navigasjonslisten er sentrert med jevne mellomrom mellom lenkene. */
 }
 
 nav ul li a {
@@ -33,17 +36,18 @@ nav ul li a {
   padding: 5px 10px;
   border-radius: 5px;
   transition: background-color 0.3s ease;
+  /* Navigasjonslenkene har myk overgang ved fargeendring når musepekeren er over. */
 }
 
 nav ul li a:hover {
   background-color: #555;
 }
 
-/* Ana İçerik */
 main {
   padding: 20px;
   max-width: 1200px;
   margin: auto;
+ /* Innholdet er sentrert og har maksimal bredde for å unngå at det sprer seg for mye. */
 }
 
 section {
@@ -52,13 +56,14 @@ section {
   background-color: white;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   border-radius: 8px;
+  /* Seksjonene har hvit bakgrunn og skygge for dybdeeffekt. */
 }
 
-/* Başlıklar */
 h1, h2 {
   text-align: center;
   color: #004a99;
   margin-bottom: 20px;
+  /* Overskrifter er sentrert med en blå farge. */
 }
 
 h1 {
@@ -69,11 +74,11 @@ h2 {
   font-size: 2rem;
 }
 
-/* Resim Galerisi */
 .image-center {
   display: flex;
   flex-direction: column;
   align-items: center;
+  /* Bilder er sentrert vertikalt i en kolonne. */
 }
 
 .image-center figure {
@@ -87,11 +92,13 @@ h2 {
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
+  /* Bilder får en myk overgang og skygge for bedre visuell effekt. */
 }
 
 .image-gallery img:hover {
   transform: scale(1.05);
   box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+  /* Når du holder musen over et bilde, zoomer det inn litt og skyggen blir større. */
 }
 
 figcaption {
@@ -117,11 +124,12 @@ a.button:hover {
   background-color: #0066cc;
 }
 
-/* Liste ve Tablo */
+/* Liste og Tablo */
 ul {
   list-style: disc;
   margin-left: 20px;
   margin-bottom: 20px;
+  /* Uordnet liste med punkter. */
 }
 
 ol {
@@ -134,6 +142,7 @@ table {
   width: 100%;
   border-collapse: collapse;
   margin: 20px 0;
+  /* Tabeller har fulldekkende bredde og sammenkoblede grenser. */
 }
 
 th, td {
@@ -145,6 +154,7 @@ th {
   background-color: #004a99;
   color: white;
   font-weight: bold;
+  /* Tabelloverskriftene har blå bakgrunn og hvit tekst. */
 }
 
 tbody tr:nth-child(even) {
@@ -155,16 +165,17 @@ tbody tr:hover {
   background-color: #e8f4fa;
 }
 
-/* Responsive Tasarım */
 @media (max-width: 768px) {
   nav ul {
     flex-direction: column;
     align-items: center;
+    /* På mindre skjermer vises navigasjonen i en vertikal liste. */
   }
 
   img {
     width: 100%;
     height: auto;
+    /* Bilder tilpasser seg skjermbredden. */
   }
 
   .image-gallery {
@@ -179,9 +190,9 @@ footer {
   padding: 15px;
   margin-top: 40px;
   border-top: 3px solid #004a99;
+   /* Footer har en mørk bakgrunn og en blå kantlinje på toppen. */
 }
 
-/* Özel Resim Boyutlandırma */
 .small-photo {
   width: 150px;
   height: auto;
@@ -192,13 +203,13 @@ footer {
   height: auto;
 }
 
-/* Sadece activity.html için */
 .activity-page header {
-  background-color: #4a4f32; /* Haki Renk */
+  background-color: #4a4f32; 
+  /* Aktivitetssiden har sin egen farge og design. */
 }
 
 .activity-page h1, .activity-page h2 {
-  color: #4a4f32; /* Haki Renk */
+  color: #4a4f32; 
 }
 
 .activity-page .image-center {
@@ -210,7 +221,7 @@ footer {
 .activity-page .vertical-img {
   width: 100%;
   max-width: 400px;
-  height: 250px; /* Sabit yükseklik */
+  height: 250px; 
   object-fit: cover;
   margin-bottom: 10px;
   border-radius: 8px;
@@ -231,11 +242,11 @@ footer {
 }
 
 .activity-page a.button {
-  background-color: #4a4f32; /* Haki Renk */
+  background-color: #4a4f32; 
 }
 
 .activity-page a.button:hover {
-  background-color: #6b7047; /* Açık Haki */
+  background-color: #6b7047; 
 }
 
 .activity-page footer {
@@ -246,12 +257,12 @@ footer {
   padding: 15px;
 }
 
-/* Sadece accessibility.html için */
 .accessibility-page figure {
   display: flex;
   flex-direction: column;
   align-items: center;
   margin: 20px auto;
+  /* Tilpasning for bilder på tilgjengelighetssiden. */
 }
 
 .accessibility-page img {
