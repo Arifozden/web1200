@@ -6,7 +6,7 @@
     <title>Accessibility</title>
     <link rel="stylesheet" href="style.css">
 </head>
-<body>
+<body class="accessibility-page">
     <header>
         <nav>
             <ul>
@@ -37,19 +37,19 @@
                 <h3>Resultater fra mobil og skrivebord</h3>
                 <figure>
                     <img src="images/Activity_Accessibility_mobile.png" alt="Tilgjengelighetsscore for mobil - Aktivitetssiden" width="400">
-                    <figcaption>Mobil: Aktivitetsside - Tilgjengelighetsscore</figcaption>
+                    <figcaption>Mobil: Aktivitetsside - Tilgjengelighetsscore = 98 </figcaption>
                 </figure>
                 <figure>
                     <img src="images/Activity_Accessibility_desktop.png" alt="Tilgjengelighetsscore for skrivebord - Aktivitetssiden" width="400">
-                    <figcaption>Skrivebord: Aktivitetsside - Tilgjengelighetsscore</figcaption>
+                    <figcaption>Desktop: Aktivitetsside - Tilgjengelighetsscore = 100</figcaption>
                 </figure>
                 <figure>
-                    <img src="images/Home_Accessibility_mobile.png" alt="Tilgjengelighetsscore for mobil - Hjemmeside" width="400">
-                    <figcaption>Mobil: Hjemmeside - Tilgjengelighetsscore</figcaption>
+                    <img src="images/Home_Accessibility_mobile.png" alt="Tilgjengelighetsscore for mobil - Home side" width="400">
+                    <figcaption>Mobil: Home side - Tilgjengelighetsscore = 100</figcaption>
                 </figure>
                 <figure>
-                    <img src="images/Home_Accessibility_desktop.png" alt="Tilgjengelighetsscore for skrivebord - Hjemmeside" width="400">
-                    <figcaption>Skrivebord: Hjemmeside - Tilgjengelighetsscore</figcaption>
+                    <img src="images/Home_Accessibility_desktop.png" alt="Tilgjengelighetsscore for skrivebord - Home side" width="400">
+                    <figcaption>Desktop: Home side - Tilgjengelighetsscore = 100</figcaption>
                 </figure>
             </div>
         </section>
@@ -61,14 +61,14 @@
             </p>
             <ul>
                 <li><strong>Alt-tekst for bilder:</strong> Alt-tekster gir viktig kontekst til skjermleserbrukere som ikke kan se bildene. Vi har inkludert beskrivende alt-tekster for alle bilder, som:
-                    <pre><code>&lt;img src="images/Home_Accessibility_mobile.png" alt="Tilgjengelighetsscore for mobil - Hjemmeside"&gt;</code></pre>
+                    <pre><code>&lt;img src="images/Home_Accessibility_mobile.png" alt="Tilgjengelighetsscore for mobil - Home side"&gt;</code></pre>
                 </li>
                 <li><strong>Semantisk HTML-struktur:</strong> Ved å bruke semantiske HTML-elementer som <code>&lt;header&gt;</code>, <code>&lt;nav&gt;</code>, <code>&lt;main&gt;</code>, og <code>&lt;footer&gt;</code>, skaper vi en logisk struktur for innholdet. For eksempel:
                     <pre><code>
 &lt;header&gt;
     &lt;nav&gt;
         &lt;ul&gt;
-            &lt;li&gt;&lt;a href="index.html"&gt;Hjem&lt;/a&gt;&lt;/li&gt;
+            &lt;li&gt;&lt;a href="index.html"&gt;Home&lt;/a&gt;&lt;/li&gt;
         &lt;/ul&gt;
     &lt;/nav&gt;
 &lt;/header&gt;
@@ -99,7 +99,7 @@ a:focus {
 }
                     </code></pre>
                 </li>
-                <li><strong>Automatiske og manuelle tester:</strong> Vi brukte både Lighthouse og Wave for å identifisere potensielle tilgjengelighetsproblemer. Selv om automatiske tester er nyttige, har vi også gjennomført manuelle sjekker for å sikre riktig tabbingsrekkefølge, logisk DOM-struktur og synlige fokusindikatorer.
+                <li><strong>Automatiske og manuelle tester:</strong> Vi brukte Lighthouse for å identifisere potensielle tilgjengelighetsproblemer. Selv om automatiske tester er nyttige, har vi også gjennomført manuelle sjekker for å sikre riktig tabbingsrekkefølge, logisk DOM-struktur og synlige fokusindikatorer.
                 </li>
                 <li><strong>Universell utforming som en helhet:</strong> Tilgjengelighet handler ikke bare om å oppfylle tekniske krav, men også om å skape en positiv brukeropplevelse. Gjennom prosjektet har vi fokusert på å gjøre nettstedet intuitivt, enkelt og meningsfylt for alle brukere, inkludert de med ulike funksjonshemninger.
                 </li>
