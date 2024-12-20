@@ -1,24 +1,93 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="no">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Page Title</title>
+    <title>Aktivitet</title>
     <link rel="stylesheet" href="style.css">
+      <!-- Kobling til CSS-fil for design og stil av denne siden. -->
 </head>
-<body>
+<body class="activity-page">
+    <!-- "activity-page" klassen brukes for spesifikk styling av denne siden. -->
     <header>
         <nav>
+             <!-- Navigasjonsmeny for å navigere mellom forskjellige sider -->
             <ul>
                 <li><a href="index.html">Home</a></li>
-                <li><a href="activity.html">Activity</a></li>
                 <li><a href="accessibility.html">Accessibility</a></li>
                 <li><a href="github.html">GitHub</a></li>
             </ul>
         </nav>
     </header>
     <main>
-        <!-- Page-specific content goes here -->
+        <section class="intro-section">
+            <!-- Introduksjonsseksjon for å gi en oversikt over favorittaktiviteten. -->
+            <h1>Min favorittaktivitet: Fotturer</h1>
+            <p>
+                Fotturer er en fantastisk måte å koble seg til naturen, holde seg i form og utforske Norges vakre landskap. I denne seksjonen deler jeg mine topp favorittsteder, fordelene med fotturer, og nyttige tips for å gjøre turene enda bedre.
+            </p>
+        </section>
+        
+        <section class="places-section">
+            <!-- Seksjon for å vise frem topp fottursteder med bilder og beskrivelser. -->
+            <h2>Topp 4 tursteder</h2>
+            <div class="image-center">
+                <!-- Sentraliserer bilder og beskrivelser. -->
+                <figure>
+                    <img src="images/fjell.jpg" alt="Fottur i fjellet" width="400" height="250" loading="lazy" class="vertical-img">
+                    <!-- Bilde med beskrivelse av tursted. -->
+                    <figcaption>Norske nasjonalparker</figcaption>
+                    <!-- Kort tekst som forklarer bildet. -->
+                    <a href="https://www.ut.no/turforslag/" class="button">Les mer</a>
+                    <!-- Knapp for å få mer informasjon. -->
+                  </figure>                  
+                  <figure>
+                    <img src="images/Trolltunga.jpg" alt="Trolltunga med spektakulær utsikt" class="vertical-img" width="400" height="250" loading="lazy" >
+                    <figcaption>Utforsk Trolltunga</figcaption>
+                        <a href="https://www.visitnorway.com/" class="button">Les mer</a>     
+                </figure>
+                <figure>
+                    <img src="images/natur.jpg" alt="Jotunheimen med fantastisk natur" class="vertical-img" width="400" height="250" loading="lazy">
+                    <figcaption>Besøk Jotunheimen</figcaption>
+                        <a href="https://www.jotunheimen.com/" class="button">Les mer</a>      
+                </figure>
+                <figure>
+                    <img src="images/hiking.jpg" alt="Gruppe på fottur i Rondane" class="vertical-img" width="400" height="250" loading="lazy">
+                    <figcaption>Oppdag Rondane</figcaption>
+                        <a href="https://www.rondane.com/" class="button">Les mer</a>   
+                </figure>                
+            </div>
+        </section>
+        
+        <section class="benefits-section">
+            <h2>Fordeler med fotturer</h2>
+            <ul class="benefits-list">
+                <li><strong>Fysisk helse:</strong> Forbedrer kardiovaskulær kondisjon og styrker muskler.</li>
+                <li><strong>Mental helse:</strong> Reduserer stress og gir bedre humør.</li>
+                <li><strong>Sosial tilknytning:</strong> En fin måte å tilbringe tid med venner og familie.</li>
+            </ul>
+        </section>
+        
+        <section class="tips-section">
+            <h2>Tips for en vellykket tur</h2>
+            <ol class="tips-list">
+                <li>Bruk komfortable sko og klær.</li>
+                <li>Ta med nok vann og snacks.</li>
+                <li>Sjekk værmeldingen før du drar.</li>
+                <li>Hold deg til merkede stier.</li>
+                <li>Informer noen om planene dine før du drar.</li>
+            </ol>
+        </section>
+        
+        <section class="resources-section">
+            <h2>Finn ut mer</h2>
+            <p>For mer informasjon om fotturer, besøk følgende sider:</p>
+            <ul class="resources-list">
+                <li><a href="https://www.ut.no/">UT.no</a> - Norges største guide for utendørsaktiviteter.</li>
+                <li><a href="https://www.visitnorway.com/">Visit Norway</a> - Planlegg utendørsopplevelser.</li>
+                <li><a href="https://www.norwegiantouristboard.com/">Den Norske Turistforening</a> - Tips for fotturer.</li>
+            </ul>
+        </section>
     </main>
     <footer>
         <p>&copy; 2024 AOA</p>

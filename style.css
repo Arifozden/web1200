@@ -1,138 +1,287 @@
-/* General Reset */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  /* Alle elementene starter uten margin eller padding, og boksmodellen inkluderer padding og border i størrelsen. */
 }
 
-/* Shared Styles */
 body {
   font-family: Arial, sans-serif;
-  line-height: 1.6;
-  margin: 20px;
-  padding: 0;
   background-color: #f9f9f9;
+  color: #333;
+/* Kroppsteksten bruker Arial-skrift, har en lys bakgrunnsfarge og mørk tekst for lesbarhet. */
 }
 
+/* Header og Navigasyon */
 header {
   background-color: #333;
   color: white;
-  padding: 10px 20px;
+  padding: 15px 20px;
+  /* Overskriften har mørk bakgrunn og hvit tekst for kontrast. */
 }
 
 nav ul {
   list-style: none;
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
+  gap: 20px;
+  /* Navigasjonslisten er sentrert med jevne mellomrom mellom lenkene. */
 }
 
 nav ul li a {
   color: white;
   text-decoration: none;
+  font-size: 1.2rem;
+  font-weight: bold;
+  padding: 5px 10px;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+  /* Navigasjonslenkene har myk overgang ved fargeendring når musepekeren er over. */
+}
+
+nav ul li a:hover {
+  background-color: #555;
 }
 
 main {
   padding: 20px;
+  max-width: 1200px;
+  margin: auto;
+ /* Innholdet er sentrert og har maksimal bredde for å unngå at det sprer seg for mye. */
 }
+
 section {
+  margin-bottom: 40px;
+  padding: 20px;
+  background-color: white;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  /* Seksjonene har hvit bakgrunn og skygge for dybdeeffekt. */
+}
+
+h1, h2 {
+  text-align: center;
+  color: #004a99;
+  margin-bottom: 20px;
+  /* Overskrifter er sentrert med en blå farge. */
+}
+
+h1 {
+  font-size: 2.5rem;
+}
+
+h2 {
+  font-size: 2rem;
+}
+
+.image-center {
   display: flex;
   flex-direction: column;
-  align-items: center; /* Sayfa ortasına hizalamak için */
+  align-items: center;
+  /* Bilder er sentrert vertikalt i en kolonne. */
 }
 
-footer {
+.image-center figure {
   text-align: center;
-  padding: 10px;
-  background-color: #333;
+  margin-bottom: 20px;
+}
+
+.image-gallery img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  /* Bilder får en myk overgang og skygge for bedre visuell effekt. */
+}
+
+.image-gallery img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+  /* Når du holder musen over et bilde, zoomer det inn litt og skyggen blir større. */
+}
+
+figcaption {
+  margin-top: 10px;
+  text-align: center;
+  font-size: 1rem;
+  color: #555;
+}
+
+a.button {
+  display: block;
+  margin: 10px auto;
+  padding: 10px 20px;
+  background-color: #004a99;
   color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  transition: background-color 0.3s ease;
 }
 
-/* Tablo stili */
-/* Tablolar için genel stil */
+a.button:hover {
+  background-color: #0066cc;
+}
+
+/* Liste og Tablo */
+ul {
+  list-style: disc;
+  margin-left: 20px;
+  margin-bottom: 20px;
+  /* Uordnet liste med punkter. */
+}
+
+ol {
+  list-style: decimal;
+  margin-left: 20px;
+  margin-bottom: 20px;
+}
+
 table {
-  margin: 20px auto;
-  width: 60%;
+  width: 100%;
   border-collapse: collapse;
-  border: 1px solid #ddd; /* Hafif gri çerçeve */
+  margin: 20px 0;
+  /* Tabeller har fulldekkende bredde og sammenkoblede grenser. */
 }
 
-/* Başlıkların stili */
+th, td {
+  border: 1px solid #ddd;
+  padding: 10px;
+}
+
 th {
-  background-color: #004a99; /* OsloMet mavisi gibi bir renk */
+  background-color: #004a99;
   color: white;
   font-weight: bold;
-  text-align: left;
-  padding: 10px;
-  border: 1px solid #ddd;
+  /* Tabelloverskriftene har blå bakgrunn og hvit tekst. */
 }
 
-/* Hücrelerin stili */
-td {
-  border: 1px solid #ddd;
-  padding: 10px;
-  color: #333; /* Koyu gri */
-}
-
-/* Alternatif satır renkleri */
 tbody tr:nth-child(even) {
   background-color: #f9f9f9;
 }
 
-/* Satır üzerine gelindiğinde arka plan rengi */
 tbody tr:hover {
-  background-color: #e0f7fa;
+  background-color: #e8f4fa;
 }
-/* Siyah arka planlı tablolar için özel stil */
-.dark-table {
-  background-color: #333; /* Siyah arka plan */
-  color: #fff; /* Beyaz yazı */
-  border: 1px solid #444; /* Hafif gri çerçeve */
+
+@media (max-width: 768px) {
+  nav ul {
+    flex-direction: column;
+    align-items: center;
+    /* På mindre skjermer vises navigasjonen i en vertikal liste. */
+  }
+
+  img {
+    width: 100%;
+    height: auto;
+    /* Bilder tilpasser seg skjermbredden. */
+  }
+
+  .image-gallery {
+    grid-template-columns: 1fr;
+  }
+}
+
+footer {
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 15px;
+  margin-top: 40px;
+  border-top: 3px solid #004a99;
+   /* Footer har en mørk bakgrunn og en blå kantlinje på toppen. */
+}
+
+.small-photo {
+  width: 150px;
+  height: auto;
+}
+
+.medium-img {
+  width: 500px;
+  height: auto;
+}
+
+.activity-page header {
+  background-color: #4a4f32; 
+  /* Aktivitetssiden har sin egen farge og design. */
+}
+
+.activity-page h1, .activity-page h2 {
+  color: #4a4f32; 
+}
+
+.activity-page .image-center {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.activity-page .vertical-img {
   width: 100%;
-  border-collapse: collapse;
-  margin: 20px 0;
+  max-width: 400px;
+  height: 250px; 
+  object-fit: cover;
+  margin-bottom: 10px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.dark-table th {
-  background-color: #333; /* Koyu gri başlık arka planı */
-  color: #fff; /* Beyaz yazı */
-  text-align: left;
-  padding: 10px;
+.activity-page .vertical-img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
 }
 
-.dark-table td {
-  padding: 10px;
-  border: 1px solid #444; /* Hafif gri hücre kenarları */
-  color: #fff; /* Beyaz yazı */
+.activity-page figcaption {
+  margin-top: 5px;
+  text-align: center;
+  font-size: 1rem;
+  color: #555;
 }
 
-/* Alternatif satır renkleri */
-.dark-table tbody tr:nth-child(even) {
-  background-color: #111; /* Daha açık siyah */
+.activity-page a.button {
+  background-color: #4a4f32; 
 }
 
-/* Satır üzerine gelindiğinde */
-.dark-table tbody tr:hover {
-  background-color: #222; /* Daha koyu gri */
+.activity-page a.button:hover {
+  background-color: #6b7047; 
 }
 
+.activity-page footer {
+  background-color: #4a4f32;
+  border-top: 3px solid #6b7047;
+  color: white;
+  text-align: center;
+  padding: 15px;
+}
 
-/* Fotoğraf hücreleri stili */
-.small-photo img {
-  width: 100px; /* Üstteki fotoğraf boyutu */
+.accessibility-page figure {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 20px auto;
+  /* Tilpasning for bilder på tilgjengelighetssiden. */
+}
+
+.accessibility-page img {
+  max-width: 80%;
   height: auto;
-  display: block;
-  margin: 0 auto;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-.large-photo img {
-  width: 200px; /* Alttaki fotoğraf boyutu (şu ankinin 2 katı) */
-  height: auto;
-  display: block;
-  margin: 0 auto;
+.accessibility-page figcaption {
+  margin-top: 10px;
+  text-align: center;
+  font-size: 1rem;
+  color: #555;
 }
 
-/* Metin hücreleri */
-td {
-  vertical-align: middle;
-  line-height: 1.5;
+.indexTitle {
+  text-align: center;
+  color: #f9f9f9;
+  margin-top: 13px;
+  font-size: 2.5rem;
 }
